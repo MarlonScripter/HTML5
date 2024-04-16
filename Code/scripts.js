@@ -15,10 +15,12 @@ async function buscarcidade(cidade){
       '&appid=cebcd482eda57fa9a6714c1c2ba91885&units=metric',
   ).then((resposta) => resposta.json())
 
+  colocarNaTela(dados)
+
 }
 
 function clicarbotao() {
-  let cidade = document.querySelector(".inputCidade").value
+  let cidade = document.querySelector(".input-cidade").value
 
   buscarcidade(cidade)
 }
